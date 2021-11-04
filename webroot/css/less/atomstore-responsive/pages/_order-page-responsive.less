@@ -1,0 +1,754 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+	
+}
+
+// Desktop
+//--------
+
+@media (max-width: 1317px){
+	.order-page{
+		padding: 0;
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					h2{
+						small{
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.order-page{
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					&.left{
+						.make-md-column(6);
+						padding-left:50px;
+						padding-right:50px;
+					}
+					
+					&.right{
+						.make-md-column(6);
+						padding-left:50px;
+						padding-right:50px;
+					}
+					
+					&.clear{
+						.make-md-column(12);
+					}
+					
+					.address-select-container{
+						.address-list{
+							a{
+								.make-md-column(6);
+							}
+						}
+					}
+				}
+			}
+		}
+		&.order-show-page{
+			.order-section{
+				padding: 0 20px;
+				.radio label .name-shipping{
+					width: 40%;
+				}
+			}
+			.order-summary{
+				h2{
+					margin-left: 60%;
+				}
+				.order-summary-table{
+					width:40%;
+				}
+			}
+			.order-actions .btn-lg{
+				width:40%;
+			}
+		}
+		&.cart-page{
+			.coupon-section{
+				padding-left:50px;
+				.circle{
+					left:15px;
+				}
+				.form.form-inline .form-row{
+					margin-right: 2%;
+					width:20%;
+				}
+				.coupon-form-label{
+					width: 37%;
+				}
+				.btn-form-size{
+					width:20%;
+				}
+			}
+		}
+		&.order-add-page{
+			.newsletter-order-section, .new-user-order-section{
+				padding-left:15px;
+				.ajax-modal-form{
+					width:25%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px){
+	.order-page{
+		.order-header{
+			.order-steps{
+				li{
+					margin-left: 25px;
+					i{
+						margin-left:20px;
+					}
+				}
+				&.active-step-4{
+					float: left;
+				}
+			}
+		}
+		
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					.form-inner{
+						.form-ok, .valid-row, .invalid-row{
+							&:after{
+								right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.cart-page{
+			.salesrep-cart-box{
+				padding-bottom: 10px;
+				margin-bottom: 0;
+				
+				.client-name{
+					float: none;
+				}
+			}
+			
+			.coupon-section{
+				padding-left: 40px;
+				.circle{
+					left: 10px;
+				}
+				.order-section-header{
+					width:23%;
+				}
+				.order-section-inner{
+					width:77%;
+				}
+				.coupon-price{
+					width       : 50%;
+				}
+				.form.form-inline .form-row{
+					width: 29%;
+					margin-right: 1%;
+					>.form-control{
+						font-size: 12px;
+						padding: 10px 5px;
+					}
+				}
+				.btn-form-size{
+					width:20%;
+					padding: 3px 5px;
+					font-size: 12px;
+					&.clear-coupon{
+						margin-left:0;
+					}
+					&.disabled{
+						display: none;
+					}
+				}
+				.coupon-form-label{
+					width       : 50%;
+					
+					.coupon-label-no-static-info{
+						line-height: normal;
+					}
+				}
+			}
+		}
+		
+		&.order-show-page{
+			.btn-save-cart{
+				margin-bottom: 10px;
+			}
+			.order-chang-status-row{
+				width: 100%;
+			}
+			.order-section{
+				padding: 0 10px;
+				.order-section-header h2{
+					margin-top:10px;
+				}
+				.radio label{
+					margin-left:10px;
+					.name-shipping, .desc-shipping{
+						width:auto;
+					}
+					.desc-shipping{
+						margin: 0 10px 0 20px;
+						vertical-align: bottom;
+					}
+					.time-shipping{
+						padding-left:10px;
+					}
+				}
+			}
+		}
+		
+		&.order-add-page{
+			.newsletter-order-section, .new-user-order-section{
+				padding:10px 5px;
+				.ajax-modal-form{
+					width:35%;
+					float: none;
+					margin: 0 auto;
+					clear:both;
+				}
+				h3{
+					float:none;
+					text-align: center;
+					margin-bottom:5px;
+					line-height:24px;
+				}
+			}
+		}
+		
+		.przelewy24-payment-form{
+			.p24-form-container{
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.order-page{
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					&.left{
+						.make-sm-column(6);
+					}
+					
+					&.right{
+						.make-sm-column(6);
+					}
+					
+					&.clear{
+						.make-sm-column(12);
+					}
+					
+					.order-section-header h2{
+						margin-top:0;
+					}
+					.address-select-container{
+						.address-list{
+							a{
+								.make-sm-column(6);
+							}
+						}
+					}
+				}
+			}
+		}
+		&.order-show-page{
+			.order-summary{
+				h2{
+					margin-left: 55%;
+					font-size: 20px;
+				}
+				.order-summary-table{
+					width:45%;
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.order-page{
+		.order-header{
+			margin-bottom: 20px;
+			padding: 0;
+			border: none;
+			h1{
+				margin-bottom: 13px;
+				width: 100%;
+				
+				.fa{
+					font-size: 12px;
+					bottom   : 2px;
+				}
+			}
+			
+			.order-steps{
+				float: left;
+				text-align: left;
+				li{
+					margin-left  : 0;
+					width        : 100%;
+					line-height  : normal;
+					margin-bottom: 7px;
+				}
+			}
+		}
+		.border-holder .border-hold{
+			display: none;
+		}
+		.payment-method-options{
+			margin: 15px 0px 0px 0px;
+			
+			> .radio{
+				clear       : none;
+				padding-left: 0px;
+				float       : left;
+				margin      : 0px;
+			}
+		}
+		
+		&.order-show-page{
+			.order-section{
+				&.payment-section{
+					border-top: 2px dashed #dadada;
+					margin-top:20px;
+					padding-top:20px;
+				}
+				.order-section-header{
+					margin-bottom: 15px;
+					
+					h2{
+						margin-bottom: 0;
+						font-size    : @font-size-m;
+					}
+					
+					.order-section-summary{
+						span{
+							font-size: @base-font-size;
+						}
+					}
+					
+					&.voucher-section-header{
+						padding-left : 0;
+						margin-bottom: 0;
+						
+						.voucher-box{
+							float: none;
+							
+							.voucher-code-container{
+								margin-bottom: 5px;
+								
+								.voucher-name{
+									padding-left: 0;
+									margin-top  : 0;
+								}
+								
+								.order-section-summary{
+									span{
+										line-height: normal;
+									}
+								}
+								
+								.voucher-code{
+									float        : left;
+									width        : 50%;
+									margin-bottom: 0;
+									margin-top   : 0;
+									margin-right : 5%;
+								}
+								
+								.btn{
+									float     : left;
+									width     : 45%!important;
+									margin-top: 0;
+								}
+							}
+							
+							.message{
+								margin-left: 0px;
+							}
+						}
+					}
+				}
+				
+				.order-section-inner{
+					padding: 0;
+					
+					&.user-cart-fields-section-inner{
+						width: 100%;
+					}
+					
+					h3{
+						font-size     : @base-font-size;
+						text-transform: none;
+					}
+					
+					p{
+						text-align: justify;
+					}
+				}
+			}
+			
+			.order-summary{
+				h2{
+					width: 100%;
+					margin-left: 0;
+				}
+				
+				.order-summary-table{
+					float: left;
+					width:100%;
+				}
+			}
+			
+			.agreement-additional-info{
+				float: left;
+				max-width: none;
+				margin-bottom: 25px;
+			}
+			.order-actions .btn-lg{
+				width:100%;
+			}
+		}
+		
+		&.order-list-page{
+			.order-search-form{
+				display: none;
+			}
+			
+			.order-list-table{
+				margin-bottom: 15px;
+			}
+		}
+		
+		&.cart-page{
+			.salesrep-cart-box{
+				padding-bottom: 10px;
+				
+				> a.btn, .frame-links, .clear-cart{
+					float: none;
+				}
+				
+				.clear-cart{
+					margin-top: 5px;
+					float     : right;
+					clear     : both;
+				}
+				
+				.client-name{
+					float: none;
+				}
+				
+				.salesrep-options{
+					float     : none;
+					margin-top: 10px;
+					
+					a, .clear-cart{
+						margin-bottom: 10px;
+						margin-right : 5px;
+						float        : left;
+						clear        : none;
+						margin-top	 : 0;
+					}
+					
+					.clear-cart{
+						margin-right: 0;
+					}
+				}
+			}
+			
+			.shipping-section{
+				.radio{
+					margin: 5px 0;
+				}
+				
+				.loyalty-free-shipping{
+					margin-top: 10px;
+				}
+			}
+			
+			.payment-section{
+				.radio{
+					margin: 5px 0;
+					
+					&.payment-method-options{
+						margin: 15px 0px 0px 0px;
+						
+						> .radio{
+							clear       : none;
+							padding-left: 0px;
+							float       : left;
+							margin      : 0px;
+						}
+					}
+				}
+				
+				.order-type-amount{
+					.form-row{
+						display: inline-block;
+						width  : auto;
+						
+						label{
+							display    : inline-block;
+							width      : auto;
+							margin     : 0 10px 0 0;
+							padding    : 0;
+							line-height: @input-height;
+						}
+						
+						.form-control{
+							display: inline-block;
+							margin : 0 10px 0 0;
+						}
+					}
+				}
+				
+				.payment-term{
+					.form-row{
+						label{
+							display: inline-block;
+							width  : auto;
+							padding: 0px 10px;
+						}
+						
+						input{
+							display: inline-block;
+							width  : auto;
+						}
+					}
+				}
+			}
+			
+			.coupon-section{
+				padding: 3px 40px 10px 40px;
+				.clearfix();
+				
+				.order-section-header{
+					width:100%;
+					text-align: center;
+				}
+				.coupon-price{
+					width:100%;
+					text-align: center;
+				}
+				.order-section-inner{
+					width:100%;
+				}
+				.coupon-form-label{
+					width:100%;
+					margin-bottom: 10px;
+					text-align: center;
+				}
+				
+				.form.form-inline .form-row{
+					width:49%;
+					margin-right:2%;
+				}
+				
+				.btn-form-size{
+					width: 49%;
+				}
+			}
+			
+			.form-actions{
+				.btn-save-cart{
+					margin-top: 20px;
+				}
+			}
+			
+			.link-action{
+				text-align: center;
+				
+				.btn-next{
+					&.btn-link{
+						width: auto;
+						margin-top: 0;
+					}
+				}
+			}
+			
+			.clear-cart, .import-cart{
+				margin-top: 0;
+			}
+		}
+		
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					&.left{
+						.make-xs-column(12);
+						
+						border: none;
+						
+						.comment-order-description{
+							width : 100%;
+							margin: -10px 0 15px 0;
+						}
+					}
+					
+					&.right{
+						.make-xs-column(12);
+						
+						border-top: 1px dashed #dadada;
+						margin-top:20px;
+						h2{
+							margin: 20px 0;
+							
+							input{
+								margin-top: 3px;
+							}
+							
+							.transform-checkbox-wrapper{
+								margin-top: 1px;
+							}
+						}
+					}
+					
+					&.clear{
+						.make-xs-column(12);
+						
+						border: none;
+					}
+					
+					.address-select-container{
+						.address-list{
+							a{
+								.make-xs-column(12);
+							}
+						}
+					}
+					
+					.form-inner{
+						.form-ok, .valid-row, .invalid-row{
+							&:not(.checkbox):after{
+								top: @input-height + 3;
+							}
+						}
+					}
+					.form-actions.hide{
+						display: block !important;
+					}
+				}
+				.order-actions.form-actions{
+					display: none;
+				}
+			}
+		}
+		&.order-add-page{
+			.info-order{
+				padding: 15px 20px;
+				p{
+					font-size:16px;
+					line-height: 21px;
+				}
+			}
+			.newsletter-order-section, .new-user-order-section{
+				.ajax-modal-form{
+					width:65%;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	.order-page{
+		&.order-show-page{
+			.order-section{
+				.order-section-header.voucher-section-header .voucher-box .voucher-code-container{
+					.voucher-code{
+						margin-right: 3%;
+					}
+					.btn{
+						width: 47% !important;
+						padding: 0 5px;
+					}
+				}
+				.order-section-inner{
+					width: 100%;
+				}
+				
+				.order-section-summary{
+					display: none;
+				}
+			}
+			.order-summary h2{
+				font-size: 18px;
+			}
+			.order-section-50{
+				width: 100%;
+				
+				&.order-section{
+					margin-bottom: 15px;
+				}
+			}
+		}
+		
+		&.order-form-page{
+			.page-content{
+				.order-form{
+					.address-select-container{
+						.address-change{
+							&.left{
+								white-space: unset;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.cart-page{
+			.coupon-section{
+				padding: 3px 10px 10px 10px;
+			}
+		}
+		
+		&.order-add-page{
+			.order-summary .order-summary-table tr td{
+				&.summary-label.order-cost-summary, &.summary-value.order-cost-summary{
+					font-size: 18px;
+					padding-top:0;
+				}
+			}
+			.newsletter-order-section, .new-user-order-section{
+				h3{
+					font-size: 18px;
+					line-height:21px;
+				}
+				.ajax-modal-form{
+					width:100%;
+				}
+			}
+		}
+	}
+}

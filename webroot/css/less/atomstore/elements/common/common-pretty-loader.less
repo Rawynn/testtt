@@ -1,0 +1,16 @@
+.pretty-loader{
+	position        : absolute;
+	display         : none;
+	width           : 22px;
+	height          : 22px;
+	border          : 1px solid @color-border;
+	background-color: @bw-f;
+	border-radius   : 4px;
+	z-index         : 2147483647;
+	
+	.pretty-loader-inner{
+		width     : 20px;
+		height    : 20px;
+		background: transparent url("@{img-path}/ajax-loader.gif") no-repeat center center;
+	}
+}

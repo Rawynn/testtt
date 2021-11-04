@@ -1,0 +1,209 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+	
+}
+
+// Desktop
+//--------
+
+@media (max-width: 1317px){
+	.wrap-header{
+		
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.wrap-header{
+		header{
+			.header-top{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.wrap-header{
+		header{
+			.header-top{
+				margin-bottom: 0;
+				.contact-info{
+					span, a{
+						margin-left: 10px;
+						margin-right: 15px;
+					}
+				}
+				.navbar{
+					>ul>li{
+						margin-right: 15px;
+						>i{
+							margin-right:10px;
+						}
+					}
+				}
+			}
+			.right-box{
+				padding-bottom: 30px;
+			}
+			.navbar{
+				
+				&.navbar-cart{
+					.make-sm-column(6);
+				}
+			}
+			
+			.company-logo{
+				
+				a{
+					display: inline-block;
+					float  : none;
+				}
+			}
+			
+			.search-form{
+				
+				.search-options{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px){
+	.wrap-header header .search-form#MainSearchElement2{
+		display: none;
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.wrap-header{
+		border: 0 none;
+		padding-bottom: 0;
+		
+		header{
+			.display-flex();
+			margin: 0 -11px;
+			.header-top{
+				width:100%;
+				margin-bottom:20px;
+				padding-top:5px;
+				padding-bottom:5px;
+				
+				&.header-top-salesrep{
+					.box-order(2);
+					
+					float: left;
+   	 				width: 100%;
+				}
+				
+				.contact-info{
+					display: none;
+				}
+				
+				.navbar{
+					display: block;
+					float: none;
+					text-align: center;
+				}
+				.language_select .transform-wrapper.transform-select-wrapper .transform-select-list.transform-select-list{
+					top: 23px;
+				}
+			}
+			.right-box{
+				display: none;
+			}
+			.navbar{
+				display: none;
+			}
+			
+			.company-logo{
+				text-align: center;
+				
+				.make-xs-column(12);
+				
+				a{
+					display: inline-block;
+				}
+			}
+			
+			.search-form{
+				display       : none;
+				margin        : 15px 0 0;
+				padding-top   : 0;
+				height        : auto;
+				.clearfix();
+				.make-xs-column(12);
+				
+				.search-options{
+					display: none;
+				}
+				
+				form{
+					display: block;
+					position: relative;
+					top: 0;
+				}
+			}
+			
+			.mobile-nav-menu{
+				display: block;
+				.clearfix();
+				.make-xs-column(12);
+				
+				text-align   : center;
+				border-top   : 1px solid @color-border;
+				border-bottom: 1px solid @color-border;
+				margin-top	 : 15px;
+				
+				&.mobile-nav-menu-salesrep{
+					.mobile-top-icons{
+						font-size: 27px;
+						color	 : @color-main;
+					}
+				}
+				
+				.mobile-top-icons{
+					display       : table-cell;
+					position      : relative;
+					width         : 1%;
+					font-size     : 28px;
+					color         : @bw-0;
+					padding-top   : 10px;
+					padding-bottom: 10px;
+					cursor		  : pointer;
+					line-height   : 20px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	.wrap-header header .header-top .navbar > ul > li{
+		margin-right:15px;
+		>i{
+			margin-right:10px;
+		}
+	}
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

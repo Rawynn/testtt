@@ -1,0 +1,119 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+
+}
+
+// Desktop
+//--------
+
+@media (min-width: 992px) and (max-width: 1317px){
+
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.cookie-message{
+		.cookie-message-inner{
+			padding-left: 15px;
+			
+			.cookie-desc-information{
+				width: 60%;
+				float: left;
+			}
+			
+			.close, .cookies-info-link{
+				width: 17%;
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.message{
+		margin : 15px 0;
+		padding: 10px 20px 10px 10px;
+		
+		&:before{
+			display: none !important;
+		}
+		
+		.close{
+			top       : 5px;
+			right     : 2px;
+			margin-top: 0;
+		}
+		
+		&.flat{
+			margin: 20px auto;
+			
+			&.no-items{
+				font-size     : @base-font-size;
+				text-transform: none;
+			}
+		}
+	}
+	
+	.cookie-message{
+		.cookie-message-inner{
+			padding-left : 15px;
+			padding-right: 15px;
+			
+			.cookie-desc-information{
+				width: 100%;
+				float: left;
+				clear: both;
+			}
+			
+			.close{
+				margin-left: 50%;
+			}
+			
+			.close, .cookies-info-link{
+				width     : 25%;
+				margin-top: 10px;
+			}
+			&.cookie-message-inner-rodo{
+				.cookie-desc-information{
+					width: 100%;
+				}
+			
+				a{
+					width: 100%;
+
+					&.close {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	.page-content{
+		.message{
+			padding-right: 10px;
+		}
+	}
+}
+
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

@@ -1,0 +1,256 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+	
+}
+
+// Desktop
+//--------
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.product-list-page{
+		.category-header, .options{
+			width: 50%;
+		}
+		
+		.product-listing-filters{
+			form{
+				.filter-item{
+					.make-md-column(2.4);
+					
+					padding-left: 5px;
+   					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 991px){
+	.product-list-page{
+		.product-list-view-options{
+			.pagination-container{
+				position: static;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.product-list-page{
+		.category-header, .options{
+			width: 100%;
+			margin-top: 0;
+		}
+		
+		.product-listing-filters{
+			form{
+				.filter-item{
+					.make-sm-column(6);
+					
+					padding-left: 5px;
+   					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.product-list-page{
+		.category-header, .options{
+			width: 100%;
+			margin-top: 0;
+		}
+		
+		.category-banners, .producer-banners{
+			display: none;
+		}
+		
+		.product-listing-filters{
+			form{
+				.filter-item{
+					.make-xs-column(12);
+					
+					padding-left: 5px;
+   					padding-right: 5px;
+   					
+   					&.filter-submit{
+   						&.filter-submit-mobile{
+   							display: block;
+   						}
+   					}
+				}
+				
+				.hidden-filters-mobile{
+					display: none;
+				}
+			}
+		}
+		
+		.product-listing-selected-filters{
+			.filter-label{
+				margin-top: 5px;
+			}
+		}
+		
+		.options{
+			.product-listing-sort{
+				width: 50%;
+				float: left;
+			}
+		}
+		
+		.options-container{
+			&.form.form-inline .form-row{
+				 &> label{
+					line-height:26px;
+					float: left;
+					width:auto;
+				}
+				&>.transform-select-wrapper{
+					width: 55px !important;
+					float: left;
+				}
+			}
+			.product-listing-view-type{
+				.btn{
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		
+		.product-list-view-options{
+			margin-top: 15px;
+			
+			.pagination-container{
+				.pagination{
+					display: inline-block;
+					
+					&.append{
+						display: block;
+						width  : 100%;
+						
+						span{
+							display: block;
+							width  : 100%;
+						}
+					}
+				}
+				
+				.btn{
+					padding-left: 12px;
+					padding-right: 12px;
+				}
+			}
+			
+			.options-container{
+				float: left;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+	.product-list-page{
+		.product-listing-filters{
+			form{
+				.filter-item{
+					.make-xs-column(6);
+					
+					padding-left: 5px;
+   					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 479px){
+	.product-list-page{
+		.product-listing-filters{
+			form{
+				.top-filters{
+					position: relative;
+				}
+				
+				.filter-item{
+					.make-xs-column(6);
+					
+					padding-left: 5px;
+   					padding-right: 5px;
+   					
+   					&.filter-category{
+   						position: static;
+   						
+   						.transform-select-wrapper{
+   							position: static;
+   							
+   							.transform-select{
+   								position: relative;
+   							}
+   							
+   							.transform-search-box, .transform-select-list{
+   								width: ~"calc(100% - 10px)";
+   							}
+   							
+   							.transform-select-list{
+   								left: 5px;
+   							}
+   						}
+   					}
+				}
+			}
+		}
+		
+		.options{
+			.product-listing-sort{
+				float: right;
+			}
+		}
+		
+		.options-container{
+			float: left;
+			margin-bottom: 10px;
+		}
+		
+		.product-list-view-options{
+			.pagination-container{
+				.pagination{
+					.btn{
+						width    : 100%;
+						font-size: @font-size-s;
+					}
+				}
+			}
+		}
+		
+		.category-thumbnail{
+			display: none;
+		}
+		
+		.add-group-label{
+			.btn{
+				display: block;
+				margin-top: 7px;
+			}
+		}
+	}
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

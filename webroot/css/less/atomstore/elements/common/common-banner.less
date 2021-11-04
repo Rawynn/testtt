@@ -1,0 +1,171 @@
+.banners {
+	.item {
+		a {
+			display: block;
+			position: relative;
+			z-index: 1;
+			
+			img {
+				display: inline-block;
+			}
+		}
+	}
+
+	.carousel {
+		overflow: hidden;
+		margin: 0;
+		text-align: center;
+		
+		.carousel-controls-panel {
+			height: 100%;
+			left: 0;
+			margin: auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100%;
+			max-width:1686px;
+			
+			.carousel-indicators {
+				z-index: 3;
+				bottom: 20px;
+				left: 0;
+				margin: 0 120px;
+				right: 0;
+				width: auto;
+				text-align: right;
+				
+				li {
+					margin: 0 8px;
+					background-color: #fbd5e6;
+					border: 0 none;
+					border-radius: 0;
+					width:15px;
+					height:15px;
+				}
+
+				.active {
+					height: 15px;
+					width: 15px;
+					background-color: #f690bd;
+				}
+			}
+
+			.carousel-control {
+				font-size: 100px;
+				z-index: 3;
+				text-shadow: none;
+				background-image: none;
+				color: @color-main;
+				top: 0;
+				width: auto;
+				
+				.opacity (1);
+				
+				&.left {
+					left: 50px;
+					
+					i {
+						left:0;
+					}
+				}
+
+				&.right {
+					right: 50px;
+					
+					i {
+						right: 20px;
+					}
+				}
+
+				&:hover {
+					color: @color-main-alt;
+				}
+
+				i {
+					position: absolute;
+					top: 50%;
+					margin-top:-21px;
+				}
+			}
+		}
+	}
+
+	&.anim-opacity {
+		.carousel {
+			.item {
+				.transition(opacity 1s ease-in-out);
+				
+				left: 0 !important;
+			}
+
+			.next.left, .prev.right {
+				opacity: 1;
+				z-index: 1;
+			}
+
+			.active.left, .active.right {
+				opacity: 0;
+				z-index: 2;
+			}
+		}
+	}
+
+	&.mainpage-banners {
+		margin-bottom: 30px;
+		text-align: center;
+		border-bottom: 1px solid #faf7f8;
+		
+		> .item {
+			display: inline-block;
+		}
+
+		.carousel-inner {
+			max-width: 1686px;
+			margin: auto;
+		}
+	}
+
+	&.dostawa-banners{
+		margin-top:120px;
+		margin-bottom: 100px;
+	}
+
+	&.show-3 {
+		.carousel-inner {
+			margin: auto;
+			overflow: visible;
+			max-width: 1300px;
+		}
+
+		.item {
+			a {
+				margin: auto;
+				position: relative;
+				top: 0;
+				width: 100%;
+				z-index: 2;
+				
+				&:first-child {
+					left: -100%;
+					position: absolute;
+					z-index: 1;
+				}
+
+				&:last-child {
+					position: absolute;
+					right: -100%;
+					z-index: 1;
+				}
+			}
+		}
+		
+		.carousel{
+			.carousel-controls-panel{
+				.carousel-control{
+					background-color: rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+	}
+}

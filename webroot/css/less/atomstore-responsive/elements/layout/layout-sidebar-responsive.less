@@ -1,0 +1,92 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+
+}
+
+// Desktop
+//--------
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.aside-box{
+		.box-header, .box-content{
+			display: block;
+		}
+		&.contact-box .contact-table tr .contact-icon .sprite{
+			left: -85px;
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.aside-box{
+		.box-header, .box-content{
+			display: block;
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.aside-box{
+		margin: 0;
+		
+		.box-header{
+			display: none;
+		}
+		
+		.box-content{
+			display: none;
+			padding: 10px 0 5px 0;
+			border : none;
+		}
+		
+		.responsive-toggle{
+			
+		}
+		
+		&.categories-box{
+			display: none;
+		}
+		&.news-box{
+			.news-list{
+				li{
+					h3{
+						font-size     : @base-font-size;
+						text-transform: none;
+						
+						.news-date{
+							float: none;
+						}
+					}
+					
+					.news-more{
+						font-size     : @base-font-size;
+						text-transform: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

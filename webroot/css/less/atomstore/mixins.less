@@ -1,0 +1,187 @@
+// Klasy pomocnicze
+// ----------------
+.responsive(@value; @property){
+	.is-responsive(@value; @property) when (@value = 0) and (@property = width){
+		width: 1170px !important;
+	}
+	
+	.is-responsive(@value; @property) when (@value = 0) and (@property = min-width){
+		min-width: 1170px !important;
+	}
+	
+	.is-responsive(@value, @property);
+}
+
+// Listy
+// -----
+.list-clear(){
+	margin    : 0;
+	padding   : 0;
+	list-style: none;
+}
+
+.list-justify(){
+	text-align: justify;
+	
+	.list-clear();
+	
+	&:after{
+		content   : ".";
+		display   : inline-block;
+		width     : 100%;
+		visibility: hidden;
+	}
+	
+	li{
+		display: inline-block;
+	}
+}
+
+// Strzałki
+// --------
+.css-triangle(@direction: top; @width: 20px; @height: 10px; @top: 0; @right: auto; @bottom: auto; @left: 0; @color: @bw-0){
+	position    : absolute;
+	display     : block;
+	top         : @top;
+	right       : @right;
+	bottom      : @bottom;
+	left        : @left;
+	width       : 0;
+	height      : 0;
+	border-style: solid;
+	content     : "";
+	
+	.direction(@direction) when (@direction = top){
+		border-width: 0 (@width / 2) @height (@width / 2);
+		border-color: transparent transparent @color transparent;
+	}
+	
+	.direction(@direction) when (@direction = top-right){
+		border-width: 0 @width @width 0;
+		border-color: transparent @color transparent transparent;
+	}
+	
+	.direction(@direction) when (@direction = right){
+		border-width: (@height / 2) 0 (@height / 2) @width;
+		border-color: transparent transparent transparent @color;
+	}
+	
+	.direction(@direction) when (@direction = bottom-right){
+		border-width: 0 0 @width @width;
+		border-color: transparent transparent @color transparent;
+	}
+	
+	.direction(@direction) when (@direction = bottom){
+		border-width: @height (@width / 2) 0 (@width / 2);
+		border-color: @color transparent transparent transparent;
+	}
+	
+	.direction(@direction) when (@direction = bottom-left){
+		border-width: @width 0 0 @width;
+		border-color: transparent transparent transparent @color;
+	}
+	
+	.direction(@direction) when (@direction = left){
+		border-width: (@height / 2) @width (@height / 2) 0;
+		border-color: transparent @color transparent transparent;
+	}
+	
+	.direction(@direction) when (@direction = top-left){
+		border-width: @width @width 0 0;
+		border-color: @color transparent transparent transparent;
+	}
+	
+	.direction(@direction);
+}
+
+// Ikony
+// -----
+.icon(@content; @width: 20px; @height: 20px; @top: 0; @right: auto; @bottom: auto; @left: 0; @color: @text-color){
+	position   : absolute;
+	display    : block;
+	top        : @top;
+	right      : @right;
+	bottom     : @bottom;
+	left       : @left;
+	width      : @width;
+	height     : @height;
+	line-height: @height;
+	font-family: @icon-font;
+	text-align : center;
+	color      : @color;
+	content    : @content;
+}
+
+.close-icon(@width: 20px; @height: 20px; @color: @text-color; @hover-color: @text-color; @font-size: 22px){
+	position       : relative;
+	display        : block;
+	width          : @width;
+	height         : @height;
+	line-height    : @height;
+	font-size      : @font-size;
+	font-weight    : normal;
+	text-align     : center;
+	text-shadow    : none;
+	text-decoration: none;
+	color          : @color;
+	cursor         : pointer;
+	
+	.opacity(1);
+	
+	&:hover{
+		text-decoration: none;
+		color          : @hover-color;
+		
+		.opacity(1);
+	}
+}
+
+.quantity-width(){
+	width: 20px !important;
+	
+	&.precision-2{
+		width: 80px !important;
+	}
+	
+	&.precision-4{
+		width: 100px !important;
+	}
+}
+
+// Klasy do zmiany kolejności elementów
+// ------------------------------------
+.display-box{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+}
+
+.box-orient(@type){
+	-webkit-box-orient: @type;
+	-moz-box-orient   : @type;
+	box-orient        : @type;
+}
+
+.ordinal-group(@nr){
+	-webkit-box-ordinal-group: @nr;
+	-moz-box-ordinal-group   : @nr;
+	box-ordinal-group        : @nr;
+}
+
+.display-flex{
+	display	 : flex;
+    flex-flow: row wrap;
+}
+
+.box-order(@number){
+	order: @number;
+}
+
+.user-select(@val){
+	-webkit-touch-callout: @val;
+	-webkit-user-select:   @val;
+	-khtml-user-select:	   @val;
+	-moz-user-select:	   @val;
+	-ms-user-select:	   @val;
+	user-select:		   @val;
+}

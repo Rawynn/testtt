@@ -1,0 +1,164 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+	
+}
+
+// Desktop
+//--------
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.text-page{
+		&.list-page{
+			&.producers-list-page{
+				.producers-list{
+					li{
+						.make-md-column(4);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.text-page{
+		&.list-page{
+			&.producers-list-page{
+				.producers-list{
+					li{
+						.make-sm-column(6);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.text-page{
+		&.news-page{
+			.news-date{
+				display   : block;
+				float     : none;
+				margin-top: 5px;
+			}
+		}
+		
+		&.landing-page{
+			.lp-gallery{
+				[class^="col-xs-"]:not(.col-xs-12){
+					width: 50%;
+				}
+			}
+		}
+		
+		&.list-page{
+			&.producers-list-page{
+				.producers-list{
+					li{
+						.make-xs-column(12);
+					}
+				}
+			}
+			
+			&.advice-list-page, &.faq-list-page{
+				ul{
+					li{
+						h3{
+							font-size: @base-font-size;
+						}
+					}
+				}
+			}
+		}
+		
+		&.survey-page{
+			.survey-form{
+				width: 100%;
+			}
+		}
+	}
+	
+	.news-list{
+		li{
+			h3{
+				font-size     : @base-font-size;
+				text-transform: none;
+				
+				.news-date{
+					float  : none;
+					display: block;
+					margin : 5px 0 0 0;
+				}
+				
+				.news-more{
+					font-size     : @base-font-size;
+					text-transform: none;
+				}
+			}
+		}
+	}
+	
+	.blog-list{
+		li{
+			h3{
+				font-size     : @base-font-size;
+				text-transform: none;
+				
+				.blog-date{
+					float  : none;
+					display: block;
+					margin : 5px 0 0 0;
+				}
+				
+				.blog-more{
+					font-size     : @base-font-size;
+					text-transform: none;
+				}
+			}
+		}
+	}
+	
+	.error-page{
+		.error-code{
+			margin   : 15px 0;
+			font-size: @font-size-xxl;
+		}
+		
+		.error-msg{
+			margin   : 15px 0;
+			font-size: @base-font-size;
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	.text-page{
+		&.landing-page{
+			.lp-gallery{
+				[class^="col-xs-"]:not(.col-xs-12){
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

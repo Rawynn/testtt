@@ -1,0 +1,120 @@
+.comparison-table-container{
+	overflow: auto;
+	
+	&[data-loaded="false"]{
+		min-height: 200px;
+	}
+	
+	.compare-table{
+		min-width      : 100%;
+		margin         : 0;
+		border-collapse: separate;
+		border-spacing : 6px 2px;
+		
+		.table > caption + thead > tr:first-child > th,
+		.table > colgroup + thead > tr:first-child > th,
+		.table > thead:first-child > tr:first-child > th,
+		
+		thead{
+			tr{
+				&:first-child{
+					th{
+						border-top : 1px solid @table-border;
+					}
+				}
+					
+				th{
+					min-width     : 225px;
+					padding       : 10px;
+					vertical-align: middle;
+					text-align    : center;
+					border        : 1px solid @table-border;
+					
+					&:first-child{
+						min-width  : 165px;
+						border-left: none;
+						border-top : 1px solid @table-border;
+					}
+					
+					.compare-product{
+						position: relative;
+						
+						.product-image{
+							img{
+								margin: 0 auto;
+							}
+						}
+						
+						.product-name{
+							display        : block;
+							font-family    : @alt-font-regular;
+							font-size      : @base-font-size;
+							text-decoration: none;
+							color          : @text-color;
+							
+							&:hover{
+								color: @color-main;
+							}
+						}
+						
+						.delete{
+							position: absolute;
+							top     : 0;
+							right   : 0;
+						}
+					}
+				}
+			}
+		}
+		
+		tbody{
+			tr{
+				td{
+					vertical-align  : middle;
+					font-size       : @font-size-s;
+					border-top      : 2px solid @bw-f;
+					
+					&:first-child{
+						border-left: none;
+					}
+					
+					ul{
+						margin : 0;
+						padding: 0;
+						
+						li{
+							list-style-position: inside;
+							list-style-type: circle;
+						}
+					}
+					
+					.price{
+						margin-left: 5px;
+						font-size  : @font-size-m;
+						font-weight: bold;
+						color      : @color-main;
+					}
+					
+					.base-price{
+						color: @color-text-light;
+						font-size  : @font-size-m - 3;
+					}
+				}
+				
+				&.cart-row{
+					td{
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.comparison-options{
+	.clearfix();
+	
+	.only-differences{
+		margin: 10px 0;
+	}
+}

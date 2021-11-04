@@ -1,0 +1,120 @@
+.modal{
+	.modal-dialog{
+		.modal-content{
+			border       : none;
+			border-radius: 0;
+			
+			.modal-header{
+				position     : relative;
+				border-bottom: 3px solid @color-main;
+				
+				.close{
+					position        : absolute;
+					top             : 0;
+					right           : 0;
+					margin          : 0;
+					color           : @color-text-lighter;
+					background-color: @color-main-alt;
+					
+					&:hover{
+						color: @bw-f;
+					}
+				}
+				
+				h1, h2, h3, h4, h5, h6, .hheader{
+					margin: 0;
+				}
+			}
+			
+			.modal-body{
+				.form-row{
+					> label{
+						padding-left: 0px;
+					}
+					
+					&.username-row-autocompleter-on > .autocompleter-container{
+						width: @input-width;
+					}
+					
+					.datepicker{
+						width: 110px;
+					}
+				}
+				
+				.form-actions{
+					margin-top : 20px;
+					padding-top: 20px;
+					border-top : 1px dashed @color-border;
+				}
+				
+				.cart-attribues-check-all{
+					margin-bottom: 10px;
+					
+					i{
+						font-size: 18px;
+						position : relative;
+						top      : 1px;
+					}
+				}
+				
+				.radio-list{
+					.radio{
+						float        : left;
+						width        : auto;
+						margin-bottom: 0;
+	 					margin-top   : 0;
+					}
+				}
+				
+				.radio{
+					display      : inline-block;
+					width        : 100%;
+					margin-bottom: 0;
+					
+					.transform-wrapper{
+						&.transform-radio-wrapper{
+							margin-bottom: 10px;
+							clear        : left;
+						}
+					}
+					
+					label{
+						float        : left;
+						margin-bottom: 10px;
+						width        : auto;
+					}
+				}
+				
+				&.center{
+					text-align: center;
+				}
+			}
+			
+			.modal-footer{
+				border-top : 1px dashed @color-border;
+				
+				&.modal-actions{
+					.clearfix();
+					
+					.btn-next{
+						float: right;
+					}
+					
+					.btn-back{
+						float: left;
+					}
+				}
+			}
+			
+			.form-actions, .modal-actions{
+				.btn-lg{
+					font-size     : @font-size-m;
+					line-height   : (@base-line-height - 4);
+					padding-top   : 6px;
+					padding-bottom: 6px;
+					min-width     : auto;
+				}
+			}
+		}
+	}
+}

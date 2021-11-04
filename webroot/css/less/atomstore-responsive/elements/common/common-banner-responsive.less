@@ -1,0 +1,131 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+
+}
+
+// Desktop
+//--------
+
+@media (max-width: 1317px){
+	.banners{
+		
+		.carousel{
+			.carousel-controls-panel{
+				width: 100%;
+				
+				.carousel-indicators{
+					margin: 0 20px;
+				}
+				.carousel-control{
+					width: auto;
+					background-color: transparent;
+					
+					&.left{
+						left: 20px;
+						right: auto;
+						
+						i{
+							left: 0;
+							right: auto;
+						}
+					}
+					
+					&.right{
+						right: 20px;
+						left: auto;
+						
+						i{
+							right: 0;
+							left: auto;
+						}
+					}
+				}
+			}
+		}
+		&.mainpage-banners{
+			margin-bottom: 30px;
+		}
+		&.dostawa-banners{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1317px){
+
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.banners{
+		.carousel .carousel-controls-panel{
+			.carousel-indicators{
+				bottom:10px;
+			}
+			.carousel-control{
+				&.right{
+					right:5px;
+				}
+				&.left{
+					left:5px;
+				}
+			}
+		}
+		&.mainpage-banners{
+			margin-bottom:0;
+		}
+	} 
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.banners{
+		.carousel{
+			.carousel-indicators{
+				display: none;
+			}
+			
+			.carousel-controls-panel{
+				.carousel-control{
+					&.right{
+						right:5px;
+					}
+					&.left{
+						left:5px;
+					}
+					i{
+						margin-top:-10px;
+					}
+				}
+			}
+		}
+		&.mainpage-banners{
+			margin-bottom:10px;
+		}
+	}
+}
+
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+	*{
+		.transition(none);
+	}
+}
