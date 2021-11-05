@@ -1,0 +1,321 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+
+}
+
+// Desktop
+//--------
+
+@media (max-width: 1317px){
+	.go-to-top{
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1317px){
+	.wrap-content{
+		.main-container{
+			.main-content{
+				.make-md-column(12);
+				
+				&.sidebar-left-true{
+					.make-md-column(12 - @left-sidebar-column);
+					
+					.product-page{
+						.product-column{
+							&.left{
+								.make-md-column(6);
+							}
+							
+							&.right{
+								.make-md-column(6);
+							}
+						}
+					}
+				}
+			}
+			
+			.sidebar{
+				&.sidebar-left{
+					.make-md-column(@left-sidebar-column);
+				}
+			}
+		}
+	}
+	
+	.gratis-products-section{
+		.product-box.small .product-image{
+			margin-right: 20px;
+		}
+	}
+}
+
+@media (max-width: 991px){
+	.wrap-content{
+		.main-container{
+			.main-content{
+				&.sidebar-left-true{
+					.product-list-page{
+						.category-header, .options{
+							width: 100%;
+						}
+					}
+					
+					.options-container{
+						float: left;
+					}
+				}
+			}
+		}
+	}
+				
+	.free-shipping-info, .gratis-products-section{
+		.info-left, .info-right{
+			.make-xs-column(12);
+		}
+		
+		.info-left{
+			padding-top: 15px;
+			border-right: none;
+		}
+	}
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.wrap-content{
+		.main-container{
+			.main-content{
+				.make-sm-column(12);
+				
+				&.sidebar-left-true, .sidebar-left-true{
+					.make-sm-column(12 - 3.3);
+					
+					.product-page{
+						.product-column{
+							&.left{
+								.make-sm-column(6);
+							}
+							
+							&.right{
+								.make-sm-column(6);
+							}
+							
+							.quantity-discount-product-page{
+								.discount-type, .discount-description.red{
+									width: 100%;
+								}
+							}
+						}
+					}
+					
+					.product-variants{
+						.variant-step{
+							label, .transform-select-wrapper{
+								width: 100%;
+							}
+						}
+					}
+					
+					.order-page{
+						.order-header{
+							.order-steps{
+								float: left;
+							}
+						}
+						
+						&.order-form-page{
+							.page-content{
+								.order-form{
+									&.left, &.right{
+										.make-sm-column(12);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			.sidebar{
+				&.sidebar-left{
+					.make-sm-column(3.3);
+				}
+			}
+		}
+	}
+	
+	.gratis-products-section{
+		.product-box.small{
+			.product-image{
+				margin-right: 20px;
+			}
+		} 
+	}
+	
+	.free-shipping-info{
+		.info-right{
+			padding-top:0;
+			padding-bottom:10px;
+			text-align: center;
+			font-size: @font-size-m;
+		}
+		.product-list{
+			&.small{
+				li{
+					width: 50%;
+					margin-bottom:10px;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.show-menu-mobile{
+		overflow: hidden;
+	}
+	
+	.wrap-content{
+		.main-container{
+			width  : auto;
+			margin : 0 (-1 * (@grid-gutter-width / 2));
+			padding: 15px (@grid-gutter-width / 2);
+			
+			> .row{
+				//.display-box();
+				//.box-orient(vertical);
+			}
+			
+			.main-content{
+				.make-xs-column(12);
+				//.ordinal-group(1);
+				
+				min-height: 0;
+				
+				&.sidebar-left-true, .sidebar-left-true{
+					.make-xs-column(12);
+					
+					.product-list-page{
+						.category-header{
+							margin-top: 20px;
+						}
+					}
+					
+					.options-container{
+						float: right;
+					}
+					
+					.product-page{
+						.product-column{
+							&.left{
+								.make-xs-column(12);
+							}
+							
+							&.right{
+								.make-xs-column(12);
+							}
+						}
+					}
+				}
+				
+				> div{
+					//float: left;
+				}
+				
+				.page{
+					
+				}
+			}
+			
+			.sidebar{
+				&.sidebar-left{
+					.make-xs-column(12);
+					
+					margin-top: 20px;
+				}
+			}
+			
+			a.responsive-toggle{
+				color: @bw-3;
+				
+				&:after{
+					color           : @bw-f;
+					background-color: lighten(@color-main-alt, 3%);
+				}
+			}
+		}
+	}
+	
+	.social-profiles-info{
+		
+	}
+	
+	.free-shipping-info, .gratis-products-section{
+		.product-box.small{
+			.product-image{
+				margin-right: 20px;
+			}
+		} 
+	}
+	.free-shipping-info{
+		.info-right{
+			font-size: @font-size-m;
+			padding-top:0;
+			padding-bottom: 15px;
+		}
+		.product-list.small li{
+			margin-bottom: 10px;
+			.product-image{
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	.wrap-content{
+		.main-container{
+			.main-content{
+				&.sidebar-left-true{
+					.options-container{
+						float: left;
+					}
+				}
+			}
+		}
+	}
+	
+	.social-profiles-info{
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 5px;
+		
+		> p{
+			width: 100%;
+		}
+		
+		a{
+			margin: 0 5px 10px;
+		}
+	}
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

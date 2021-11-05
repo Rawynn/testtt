@@ -1,0 +1,93 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+
+}
+
+// Desktop
+//--------
+
+@media (min-width: 992px) and (max-width: 1317px){
+
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.img-thumbnail{
+		margin: 5px 10px 5px 0;
+	}
+	
+	.responsive-toggle{
+		position      : relative;
+		display       : block;
+		padding       : 10px 0 10px @base-line-height + 20;
+		line-height   : @base-line-height + 10;
+		font-family   : @alt-font-regular;
+		font-size     : @font-size-m;
+		text-transform: uppercase;
+		color         : @text-color;
+		
+		&:after{
+			.icon("\f0c9", @base-line-height + 10, @base-line-height + 10, 10px, auto, auto, 0, @text-color);
+			
+			padding    : 4px;
+			line-height: @base-line-height;
+			font-size  : 17px;
+			border     : 1px solid @color-border;
+		}
+		
+		&:hover{
+			text-decoration: none;
+			color          : @text-color;
+			
+			&:after{
+				background-color: darken(@bw-f, 5%);
+			}
+		}
+		
+		&.inverse{
+			color: @bw-f;
+			
+			&:after{
+				color       : @bw-f;
+				border-color: lighten(@color-main-alt, 6%);
+			}
+			
+			&:hover{
+				text-decoration: none;
+				
+				&:after{
+					background-color: lighten(@color-main-alt, 3%);
+				}
+			}
+		}
+	}
+	
+	[data-loaded=true]{
+		img{
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+
+}
+
+.touch{
+
+}

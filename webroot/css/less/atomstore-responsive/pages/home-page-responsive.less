@@ -1,0 +1,209 @@
+// Large Desktop
+//--------------
+
+@media (min-width: 1318px){
+	
+}
+
+// Desktop
+//--------
+
+@media (max-width: 1343px){
+	.home-page{
+		
+		.mainpage-news{
+			.news-box{
+				.news-list{
+					li{
+						h3{
+							.news-date{
+								float: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1317px){
+
+}
+
+// Tablet
+//-------
+
+@media (min-width: 768px) and (max-width: 991px){
+	.home-page{
+		.mainpage-tabs{
+			li{
+				padding: 0 40px;
+			}
+		}
+	}
+	.blog-list-holder{
+		margin-top:0;
+		margin-bottom: 20px;
+		display: block;
+		li{
+			width:30%;
+			float: left;
+			display: block;
+			min-height:245px;
+			&.blog-img{
+				width:40%;
+				text-align: center;
+				height: 490px;
+				padding-top:114px;
+				img{
+					display: inline-block;
+				}
+			}
+			&:nth-child(2), &:nth-child(3){
+				border-bottom: none;
+			}
+			&:nth-child(3){
+				border-right: 1px solid #d7dbe5;
+			}
+		}
+	}
+}
+
+// Mobile
+//-------
+
+@media (max-width: 767px){
+	.home-page{
+		.mainpage-tabs{
+			li{
+				padding: 0 20px;
+				a{
+					font-size: 16px;
+					padding: 0;
+				}
+			}
+		}
+		
+		.mainpage-tab-content{
+			
+			.product-box{
+				&.gallery{
+					.product-image{
+						.preload-image{
+							height: auto;
+							line-height: normal;
+						}
+					}
+				}
+			}
+		}
+		
+		.mainpage-news{
+			.news-box{
+				margin: 20px 0 0 0;
+				
+				.responsive-toggle{
+					display: none !important;
+				}
+				
+				.box-header{
+					display: block;
+				}
+				
+				.box-content{
+					display: block;
+					margin : 0;
+					padding: 0;
+					border : none;
+				}
+				
+				.news-list{
+					li{
+						.make-xs-column(12);
+						
+					}
+				}
+			}
+		}
+	}
+	.blog-list-holder{
+		margin-top:0;
+		margin-bottom: 20px;
+		display: block;
+		.make-row();
+		width:auto;
+		li{
+			width:50%;
+			float: left;
+			display: block;
+			min-height:248px;
+			&.blog-img{
+				width:100%;
+				text-align: center;
+				min-height: auto;
+				margin-bottom:15px;
+				span{
+					display: block;
+					color: @bw-0;
+					text-transform: uppercase;
+					font-size: @font-size-m;
+					font-family: @alt-font-bold;
+				}
+				img{
+					display: none;
+				}
+			}
+			&:nth-child(2), &:nth-child(3){
+				border-bottom: none;
+			}
+			&:nth-child(3){
+				//border-right: 1px solid #d7dbe5;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+
+}
+
+@media (max-width: 479px){
+	.home-page{
+		.mainpage-tabs ul{
+			display: block;
+			height: auto;
+			li{
+				display: block;
+				padding: 10px;
+				& + li{
+					border-top: none;
+					border-left:1px solid @color-border;
+				}
+				a{
+					font-size:14px;
+				}
+			}
+		}
+	}
+	.blog-list-holder{
+		li{
+			width:100%;
+			min-height:auto;
+			&:nth-child(2){
+				//border-right: 1px solid #d7dbe5;
+			}
+			&:nth-child(4){
+				border-bottom: none;
+				//border-right: 1px solid #d7dbe5;
+			}
+		}
+	}
+}
+
+// Urządzenia dotykowe
+//--------------------
+
+.touch{
+
+}

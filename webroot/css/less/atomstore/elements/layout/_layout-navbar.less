@@ -1,0 +1,280 @@
+.wrap-navbar{
+	width: 100%;
+	border-bottom: 1px solid #d7dbe5;
+	position: relative;
+}
+.main-nav-top{
+	>ul{
+		.list-clear();
+		.clearfix();
+		>li{
+			float:left;
+			>a{
+				text-transform: uppercase;
+				font-family: @alt-font-regular;
+				font-size: @font-size-m;
+				color: @bw-0;
+				display: block;
+				line-height:48px;
+				padding: 0 15px;
+				border-right: 1px solid #eff1f5;
+				&:hover{
+					text-decoration: none;
+				}
+				i{
+					margin-left: 5px;
+					font-size: 20px;
+				}
+			}
+			&:first-child{
+				background: #eff1f5;
+				padding: 0 10px 0 10px;
+			}
+		}
+	}
+}
+.main-nav{
+	width: 100%;
+	display: none;
+	position: absolute;
+	top: 49px;
+	left: 0;
+	z-index:999;
+	
+	.row{
+		margin: 0;
+		background: @bw-f;
+		border: 1px solid @color-border;
+		border-top: none;
+		border-bottom-width:5px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display:         flex;
+		flex-wrap: wrap;
+	}
+	.col-sm-3, .col-md-3{
+		.list-clear();
+		width:26.666%;
+		background: @bw-f;
+		ul{
+			.list-clear();
+		}
+		.scroll-bar.vertical{
+			width:4px;
+			z-index:2;
+			.thumb{
+				background: @color-main;
+			}
+		}
+		.viewport{
+			.overview{
+				width:100%;
+			}
+		}
+		a{
+			color: @bw-0;
+			line-height:26px;
+			display: block;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		&.last{
+			width:20%;
+			&.banner-menu{
+				a{
+					display: none;
+				}
+			}
+			a{
+				line-height: 20px;
+				display: inline-block;
+			}
+		}
+		&.parent{
+			&:after{
+				content:'';
+				position:absolute;
+				top: 0;
+				right:0;
+				bottom: 0;
+				width:1px;
+				background: @color-border;
+			}
+			li{
+				padding: 5px 10px;
+				&.hover{
+					background: #eff1f5;
+					font-family: @alt-font-bold;
+				}
+			}
+		}
+		&.child2{
+			li >ul li:hover{
+				background: #eff1f5;
+				font-family: @alt-font-bold;
+			}
+		}
+		&.child1, &.child2{
+			&:after{
+				content:'';
+				position:absolute;
+				top: 0;
+				right:0;
+				bottom: 0;
+				width:1px;
+				background: @color-border;
+			}
+			ul{
+				display: none;
+			}
+			li >ul{
+				li{
+					padding: 5px 10px;
+					&.hover{
+						background: #eff1f5;
+						font-family: @alt-font-bold;
+					}
+				}
+			}
+		}
+	}
+	.child1 ul{
+		display: none;
+	}
+	.child2 ul{
+		display: none;
+	}
+	.main-nav-list{
+		position: relative;
+		z-index : @base-z-index - 1;
+		.list-clear();
+		
+		> li{
+			height: 63px;
+			vertical-align: middle;
+			
+			&.active > a, .active{
+				color: @text-color;
+				text-decoration: underline;
+				
+				&:hover{
+					color: @text-color;
+				}
+			}
+			
+			&.mobile-close-nav{
+				display: none;
+			}
+			
+			> a{
+				position       : relative;
+				font-size      : @font-size-m;
+				text-transform : uppercase;
+				text-decoration: none;
+				color          : @text-color;
+				z-index        : @base-z-index;
+				padding		   : 0 5px;
+				display		   : block;
+				line-height	   : 21px;
+				
+				&:hover{
+					color: @color-text-light;
+				}
+				
+				i{
+					font-size: @font-size-s;
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.sub-cat{
+		position        : absolute;
+		display         : none;
+		top             : 65px;
+		left            : 0;
+		width           : 100%;
+		padding         : 20px 30px 25px;
+		color           : @text-color;
+		background-color: @background-color;
+		z-index         : @base-z-index;
+		
+		.sub-categories{
+			margin-bottom: 20px;
+			
+			.make-xs-column(2.4);
+			
+			> a, > span{
+				font-size      : @font-size-m;
+				text-transform : uppercase;
+				text-decoration: none;
+				color          : @color-main;
+				
+				&:hover{
+					color: @color-main-alt;
+				}
+				
+				i{
+					font-size: @font-size-s;
+					display: none;
+				}
+			}
+			
+			.sub-categories-list{
+				margin: 15px 0 0;
+				
+				li{
+					display: block;
+					
+					a{
+						color: @color-main-alt;
+						line-height: 18px;
+						padding-left: 0;
+						
+						&:after{
+							display: none;
+						}
+						
+						&:hover{
+							color: @color-main;
+						}
+					}
+				}
+			}
+		}
+		
+		.sub-categories-options{
+			.list-clear();
+			
+			margin-top: 15px;
+			
+			li{
+				display: inline-block;
+				margin-right: 35px;
+				
+				&:last-child{
+					margin-right: 0;
+				}
+				
+				a{
+					text-decoration: none;
+					color          : @color-main-alt;
+					text-transform : uppercase;
+					font-size	   : @font-size-m;
+					
+					&:hover{
+						color: @color-main;
+					}
+				}
+			}
+		}
+		
+		hr{
+			margin: 0;
+			border-top-width: 2px;
+		}
+	}
+}

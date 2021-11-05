@@ -1,0 +1,212 @@
+.table{
+	margin-bottom: 0;
+	border       : none;
+	
+	&.offer-list-table{
+		th, td{
+			font-size: 12px;
+		}
+	}
+	
+	&.table-striped{
+		tbody{
+			> tr:nth-child(odd) > td,
+			> tr:nth-child(odd) > th{
+				background-color: @table-bg-accent;
+			}
+		}
+	}
+	
+	&.table-hover{
+		tbody{
+			tr:hover > td,
+			tr:hover > th{
+				background-color: @table-bg-accent;
+			}
+		}
+	}
+	
+	&.table-flat{
+		width: auto;
+		
+		tr{
+			td{
+				border: none;
+			}
+		}
+	}
+	
+	&.show-details{
+		width: 100%;
+		
+		> tbody{
+			> tr{
+				> td{
+					line-height: @input-height;
+					height     : @input-height;
+					border     : none;
+					padding    : 5px 0px;
+					
+					&.label{
+						padding       : 0px 10px 0px 20px;
+						width         : 32%;
+						letter-spacing: 1px;
+						font-weight   : normal;
+						background    : none;
+						text-transform: none;
+						font-family   : @base-font-family;
+						color         : @text-color;
+						font-size     : @base-font-size;
+						display       : table-cell;
+						text-align    : left;
+						
+						&.long{
+							vertical-align: top;
+							padding-top   : 5px;
+						}
+					}
+					
+					&.value{
+						width      : 68%;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	
+	&.table-second{
+		margin-top: 25px;
+	}
+	
+	&.product-table{
+		colgroup + thead,
+		> thead:first-child{
+			> tr{
+				&:first-child{
+					> th{
+						border-top: 1px solid @color-border;
+					}
+				}
+			}
+		}
+	}
+	
+	&.product-table-salesrep{
+		position: relative;
+		
+		tbody{
+			tr{
+				&:nth-child(odd){
+					> td{
+						background-color: transparent;
+					}
+				}
+				
+				&:nth-child(4n+3), &:nth-child(4n+4){
+					> td{
+						background-color: @table-bg-accent;
+					}
+				}
+				
+				&.product-row-salesrep-options{
+					display         : none;
+					background-color: @bw-f;
+					position        : absolute;
+					width           : 100%;
+					z-index         : 1;
+					
+					td{
+						float : left;
+						width : 100%;
+						border: 0 none;
+					}
+				}
+			}
+		}
+		
+		.table-options{
+			text-align: right;
+			
+			a{
+				.text-overflow();
+				
+				margin: 0;
+				
+				&.active{
+					i{
+						&:before{
+							content: "\f139";
+						}
+					}
+				}
+				
+				i{
+					margin-left: 3px;
+				}
+			}
+		}
+	}
+	
+	.table-options{
+		text-align: center;
+		
+		a, > span{
+			margin-right   : 8px;
+			text-decoration: none;
+			color          : @color-text-light;
+			cursor		   : pointer;
+			
+			&:hover{
+				color: @color-main;
+			}
+		}
+	}
+	
+	thead{
+		tr{
+			th{
+				padding-top   : 0;
+				font-family   : @alt-font-bold;
+				font-weight   : normal;
+				text-transform: uppercase;
+				border        : none;
+			}
+		}
+	}
+	
+	tbody{
+		tr{
+			td{
+				vertical-align: middle;
+				border-color  : @table-border;
+				
+				&.center.small-size{
+					min-height: 30px;
+				}
+				
+				.table-responsive-label{
+					display: none;
+				}
+			}
+			
+			&.disabled{
+				td{
+					color: @color-text-light;
+				}
+			}
+		}
+	}
+	
+	.salesrep-options-box{
+	    float: left;
+	    padding: 5px 0;
+	    width: 100%;
+	    
+	    a{
+	    	text-decoration: none;
+	    	margin-right: 25px;
+	    	display: inline-block;
+	    }
+	}
+}

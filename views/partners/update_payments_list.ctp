@@ -1,0 +1,1 @@
+<?php echo $this->element(TEMPLATE_NAME.DS.'partner_payments'.DS.'list');?>

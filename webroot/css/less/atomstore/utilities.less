@@ -1,0 +1,122 @@
+.text-important{
+	color: @color-main !important;
+}
+
+.text-muted{
+	font-size: @font-size-s !important;
+	color    : #4e4e4e !important;
+}
+
+.label{
+	padding         : 3px 4px;
+	font-family     : @base-font-family;
+	text-shadow     : none;
+	text-transform  : uppercase;
+	background-color: @color-main-alt;
+	border-radius   : 0;
+}
+
+.close, .delete{
+	.close-icon(20px, 20px, @color-text-light, @color-text-lighter);
+	.transition(all 0.35s ease);
+}
+
+.img-thumbnail{
+	float : left;
+	margin: 3px 15px 10px 0;
+	border: 1px solid @color-border;
+	border-radius: 0;
+}
+
+.responsive-toggle{
+	display: none;
+}
+
+.preload-image[data-loaded="false"]{
+	position : relative;
+	display  : block;
+	font-size: 0px;
+	
+	&:after{
+		display       : block;
+		background    : @bw-f url("@{img-path}/ajax-loader-big.gif") no-repeat center center;
+		content       : "";
+		padding-top   : 50%;
+		padding-bottom: 50%;
+	}
+	
+	img{
+		position  : absolute;
+		visibility: hidden;
+		min-height: 1px;
+		left      : 0;
+		top       : 0;
+		
+		.opacity(0);
+		.transition(all 0.4s linear);
+	}
+}
+
+.preload-image[data-loaded="true"]{
+	img{
+		visibility: visible;
+		
+		.opacity(1);
+	}
+}
+
+iframe[name="google_conversion_frame"]{
+	float      : left !important;
+	width      : 0 !important;
+	height     : 0 !important;
+	margin-top : -13px !important;
+	line-height: 0 !important; 
+	font-size  : 0 !important;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+.posistion-relative{
+	position: relative;
+}
+
+.more{
+	font-family: @alt-font-regular;
+	color: @color-text-light;
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none;
+	
+	.text-overflow();
+	
+	i{
+		color: @color-main-alt;
+		margin-left: 3px;
+	}
+	
+	&:hover{
+		color: @color-main-alt;
+		text-decoration: none;
+		
+		i{
+			color: inherit;
+		}
+	}
+}
+
+.base-price{
+	text-decoration: none;
+	position: relative;
+	
+	&:after{
+		position: absolute;
+		content: "";
+		top: 50%;
+		width: 100%;
+		left: 0;
+		height: 1px;
+		background-color: #4e4e4e;
+	}
+}
