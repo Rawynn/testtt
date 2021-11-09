@@ -1,1 +1,0 @@
-<?php echo $this->Image->resize('layout'.DS.TEMPLATE_NAME.DS.'no-photo.png', $width, $height) ?>
